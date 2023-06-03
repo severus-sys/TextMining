@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metin Özetleme</title>
+    <style>
+        body {
+            background-color: #1E1E1E;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 578px;
+            height: 200px;
+            background-color: #1E1E1E;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .title {
+            font-weight: 1000px;
+            font-size: 30px;
+            line-height: 44px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+        
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .input-container label {
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+        
+        .input-container input[type="file"] {
+            width: 300px;
+            height: 100px;
+            font-weight: 800px;
+            font-size: 15px;
+            line-height: 100px;
+            color: #FFFFFF;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .button-container button {
+            width: 138px;
+            height: 35px;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Metin Özetleme Uygulaması</div>
+        <form action="/summary" method="POST" enctype="multipart/form-data">
+            <div class="input-container">
+                <label for="text">Metin giriniz:</label>
+                <textarea name="text" id="text" rows="5" cols="50"></textarea>
+            </div>
+            <div class="input-container">
+                <label for="file">YA DA DOSYA AT (PDF, TXT, DOCX):</label>
+                <input type="file" name="file" id="file" accept=".pdf, .txt, .docx">
+            </div>
+            <div class="button-container">
+                <button type="submit">Özetle</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
